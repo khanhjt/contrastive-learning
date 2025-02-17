@@ -41,13 +41,13 @@ df['text'] = df['text'].apply(stem).apply(remove_special_characters).apply(remov
 
 count_vectorizer = CountVectorizer()
 bow = count_vectorizer.fit_transform(df['text'])
-with open ('bow.pkl', 'wb') as f:
+with open ('data/bow.pkl', 'wb') as f:
     pickle.dump(bow, f)
 
 tfidf_vectorizer = TfidfVectorizer()
 tfidf = tfidf_vectorizer.fit_transform(df['text'])
-with open ('tfidf.pkl', 'wb') as f:
+with open ('data/tfidf.pkl', 'wb') as f:
     pickle.dump(tfidf, f)
 
-with open ('label.pkl', 'wb') as f:
+with open ('data/label.pkl', 'wb') as f:
     pickle.dump(label, f)

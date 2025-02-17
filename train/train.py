@@ -95,7 +95,9 @@ def train(model, train_dataloader, config, optimizer):
         training_loss += cs_loss
         cs_loss.backward()
         optimizer.step()
-    training_loss = training_loss / T
+    training_loss =     print(f"Batch {i+1}/{T}, Loss: {cs_loss.item():.6f}")
+    training_loss / T
     print(f"loss: {training_loss:>7f}")
     return training_loss
+
 

@@ -1,10 +1,9 @@
 import torch
 import pickle
 import os
-import numpy as np
-from config.config_clprolda import Config
-from model.constractive_prodlda import ConstractiveProdLDA
-from train.train import compute_beta, loss, train
+from config.config import Config
+from model.constractive import ConstractiveProdLDA
+from train.train import train
 from train.infer import get_latent_representation
 from data.datareader import ConstractiveProLDADataset
 from torch.optim import Adam
